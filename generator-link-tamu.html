@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Generator Link Tamu
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f5132,
+                    #198754
+                );
+
+            color: #222;
+
+            padding: 20px;
+
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+        }
+
+
+        .header {
+
+            color: #fff;
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .header h1 {
+
+            margin: 0 0 8px;
+
+            font-size: 26px;
+
+        }
+
+
+        .header p {
+
+            margin: 0;
+
+            opacity: .85;
+
+            font-size: 14px;
+
+        }
+
+
+        .card {
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            padding: 20px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,.15);
+
+        }
+
+
+        label {
+
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        input,
+        textarea {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border:
+                1px solid #ddd;
+
+            border-radius: 12px;
+
+            font-size: 14px;
+
+            outline: none;
+
+        }
+
+
+        input:focus,
+        textarea:focus {
+
+            border-color:
+                #198754;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(25,135,84,.1);
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .button {
+
+            border: 0;
+
+            border-radius: 12px;
+
+            padding:
+                13px 18px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .button-primary {
+
+            background:
+                #198754;
+
+            color: #fff;
+
+        }
+
+
+        .button-secondary {
+
+            background:
+                #eee;
+
+            color: #222;
+
+        }
+
+
+        .button-danger {
+
+            background:
+                #dc3545;
+
+            color: #fff;
+
+        }
+
+
+        .button-whatsapp {
+
+            background:
+                #25D366;
+
+            color: #fff;
+
+        }
+
+
+        .actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+        }
+
+
+        .table-wrapper {
+
+            width: 100%;
+
+            overflow-x: auto;
+
+        }
+
+
+        table {
+
+            width: 100%;
+
+            border-collapse:
+                collapse;
+
+            min-width: 700px;
+
+        }
+
+
+        th,
+        td {
+
+            padding:
+                11px 10px;
+
+            border-bottom:
+                1px solid #eee;
+
+            text-align: left;
+
+            font-size: 13px;
+
+        }
+
+
+        th {
+
+            background:
+                #f7f7f7;
+
+            font-weight: 700;
+
+        }
+
+
+        td input {
+
+            min-width: 150px;
+
+        }
+
+
+        .link-box {
+
+            word-break:
+                break-all;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+            background:
+                #f8f9fa;
+
+            padding: 8px;
+
+            border-radius: 8px;
+
+        }
+
+
+        .empty {
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #777;
+
+        }
+
+
+        .counter {
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+            color: #555;
+
+        }
+
+
+        .notice {
+
+            background:
+                #fff3cd;
+
+            color:
+                #664d03;
+
+            padding: 12px;
+
+            border-radius: 12px;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        @media (
+            max-width: 600px
+        ) {
+
+            body {
+
+                padding: 12px;
+
+            }
+
+
+            .card {
+
+                padding: 15px;
+
+                border-radius: 16px;
+
+            }
+
+
+            .header h1 {
+
+                font-size: 21px;
+
+            }
+
+
+            .actions {
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .button {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <header class="header">
+
+        <h1>
+            💌 Generator Link Tamu
+        </h1>
+
+        <p>
+            PROJECT MASTER — UNDANGAN DIGITAL PREMIUM
+        </p>
+
+    </header>
+
+
+    <!-- ==================================================
+         URL UNDANGAN
+         ================================================== -->
+
+    <div class="card">
+
+        <div class="form-group">
+
+            <label>
+                URL Undangan
+            </label>
+
+            <input
+                id="baseUrl"
+                type="url"
+                placeholder="https://username.github.io/nama-repository/">
+
+        </div>
+
+
+        <div class="notice">
+
+            Masukkan alamat utama halaman
+            <strong>index.html</strong>
+            undangan Anda.
+
+            Contoh:
+
+            <br><br>
+
+            https://username.github.io/PROJECT-MASTER-UNDANGAN-DIGITAL-PREMIUM/
+
+        </div>
+
+
+        <div class="actions">
+
+            <button
+                class="button button-primary"
+                onclick="generateLinks()">
+
+                🔗 Buat Link Personal
+
+            </button>
+
+
+            <button
+                class="button button-secondary"
+                onclick="addRow()">
+
+                ＋ Tambah Tamu
+
+            </button>
+
+
+            <button
+                class="button button-secondary"
+                onclick="copyAllLinks()">
+
+                📋 Salin Semua Link
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         DAFTAR TAMU
+         ================================================== -->
+
+    <div class="card">
+
+        <div class="counter">
+
+            Total Tamu:
+
+            <strong id="totalGuest">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            No
+                        </th>
+
+                        <th>
+                            Nama Tamu
+                        </th>
+
+                        <th>
+                            WhatsApp
+                        </th>
+
+                        <th>
+                            Link Personal
+                        </th>
+
+                        <th>
+                            Aksi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="guestTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+"use strict";
+
+
+/* =====================================================
+   DATA
+   ===================================================== */
+
+let guests = [];
+
+
+/* =====================================================
+   INITIALIZE
+   ===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        addRow();
+
+        loadBaseUrl();
+
+    }
+);
+
+
+/* =====================================================
+   BASE URL
+   ===================================================== */
+
+function loadBaseUrl() {
+
+    const baseUrl =
+        localStorage.getItem(
+            "invitation_base_url"
+        );
+
+
+    if (
+        baseUrl
+    ) {
+
+        document
+            .getElementById(
+                "baseUrl"
+            )
+            .value =
+            baseUrl;
+
+    }
+
+}
+
+
+/* =====================================================
+   ADD ROW
+   ===================================================== */
+
+function addRow(
+    name = "",
+    whatsapp = ""
+) {
+
+    guests.push({
+
+        name:
+            name,
+
+        whatsapp:
+            whatsapp,
+
+        link:
+            ""
+
+    });
+
+
+    renderTable();
+
+}
+
+
+/* =====================================================
+   RENDER TABLE
+   ===================================================== */
+
+function renderTable() {
+
+    const tbody =
+        document.getElementById(
+            "guestTable"
+        );
+
+
+    tbody.innerHTML = "";
+
+
+    guests.forEach(
+        function (
+            guest,
+            index
+        ) {
+
+            const tr =
+                document.createElement(
+                    "tr"
+                );
+
+
+            tr.innerHTML = `
+
+                <td>
+                    ${index + 1}
+                </td>
+
+
+                <td>
+
+                    <input
+                        type="text"
+                        value="${escapeHtmlAttribute(
+                            guest.name
+                        )}"
+                        placeholder="Nama Tamu"
+                        oninput="updateGuest(
+                            ${index},
+                            'name',
+                            this.value
+                        )">
+
+                </td>
+
+
+                <td>
+
+                    <input
+                        type="tel"
+                        value="${escapeHtmlAttribute(
+                            guest.whatsapp
+                        )}"
+                        placeholder="08xxxxxxxxxx"
+                        oninput="updateGuest(
+                            ${index},
+                            'whatsapp',
+                            this.value
+                        )">
+
+                </td>
+
+
+                <td>
+
+                    <div
+                        class="link-box">
+
+                        ${
+                            guest.link ||
+                            "Belum dibuat"
+                        }
+
+                    </div>
+
+                </td>
+
+
+                <td>
+
+                    <div class="actions">
+
+                        <button
+                            class="button button-whatsapp"
+                            onclick="sendWhatsApp(
+                                ${index}
+                            )">
+
+                            WhatsApp
+
+                        </button>
+
+
+                        <button
+                            class="button button-secondary"
+                            onclick="copyLink(
+                                ${index}
+                            )">
+
+                            Salin
+
+                        </button>
+
+
+                        <button
+                            class="button button-danger"
+                            onclick="removeGuest(
+                                ${index}
+                            )">
+
+                            Hapus
+
+                        </button>
+
+                    </div>
+
+                </td>
+
+            `;
+
+
+            tbody.appendChild(
+                tr
+            );
+
+        }
+    );
+
+
+    document
+        .getElementById(
+            "totalGuest"
+        )
+        .textContent =
+        guests.length;
+
+}
+
+
+/* =====================================================
+   UPDATE GUEST
+   ===================================================== */
+
+function updateGuest(
+    index,
+    field,
+    value
+) {
+
+    if (
+        !guests[index]
+    ) {
+
+        return;
+
+    }
+
+
+    guests[index][field] =
+        value;
+
+
+    /*
+     * Jika nama berubah,
+     * link lama harus dibuat ulang.
+     */
+
+    if (
+        field === "name"
+    ) {
+
+        guests[index].link =
+            "";
+
+    }
+
+}
+
+
+/* =====================================================
+   GENERATE LINKS
+   ===================================================== */
+
+function generateLinks() {
+
+    const baseUrl =
+        document
+            .getElementById(
+                "baseUrl"
+            )
+            .value
+            .trim();
+
+
+    if (
+        !baseUrl
+    ) {
+
+        alert(
+            "Silakan masukkan URL undangan."
+        );
+
+        return;
+
+    }
+
+
+    try {
+
+        /*
+         * Validasi URL.
+         */
+
+        new URL(
+            baseUrl
+        );
+
+    } catch (
+        error
+    ) {
+
+        alert(
+            "URL undangan tidak valid."
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * Simpan URL.
+     */
+
+    localStorage.setItem(
+        "invitation_base_url",
+        baseUrl
+    );
+
+
+    /*
+     * Buat link.
+     */
+
+    guests.forEach(
+        function (
+            guest
+        ) {
+
+            const name =
+                guest.name.trim();
+
+
+            if (
+                !name
+            ) {
+
+                guest.link =
+                    "";
+
+                return;
+
+            }
+
+
+            const url =
+                new URL(
+                    baseUrl
+                );
+
+
+            url.searchParams.set(
+                "kpd",
+                name
+            );
+
+
+            guest.link =
+                url.toString();
+
+        }
+    );
+
+
+    renderTable();
+
+
+    alert(
+        "Link personal berhasil dibuat."
+    );
+
+}
+
+
+/* =====================================================
+   COPY ONE LINK
+   ===================================================== */
+
+async function copyLink(
+    index
+) {
+
+    const guest =
+        guests[index];
+
+
+    if (
+        !guest ||
+        !guest.link
+    ) {
+
+        alert(
+            "Buat link personal terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    const success =
+        await copyText(
+            guest.link
+        );
+
+
+    if (
+        success
+    ) {
+
+        alert(
+            "Link berhasil disalin."
+        );
+
+    } else {
+
+        alert(
+            "Link gagal disalin."
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   COPY ALL LINKS
+   ===================================================== */
+
+async function copyAllLinks() {
+
+    const links =
+        guests
+            .filter(
+                function (
+                    guest
+                ) {
+
+                    return guest.link;
+
+                }
+            )
+            .map(
+                function (
+                    guest,
+                    index
+                ) {
+
+                    return (
+                        `${index + 1}. ` +
+                        `${guest.name}\n` +
+                        `${guest.link}`
+                    );
+
+                }
+            )
+            .join(
+                "\n\n"
+            );
+
+
+    if (
+        !links
+    ) {
+
+        alert(
+            "Belum ada link yang dibuat."
+        );
+
+        return;
+
+    }
+
+
+    const success =
+        await copyText(
+            links
+        );
+
+
+    if (
+        success
+    ) {
+
+        alert(
+            "Semua link berhasil disalin."
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+   ===================================================== */
+
+function sendWhatsApp(
+    index
+) {
+
+    const guest =
+        guests[index];
+
+
+    if (
+        !guest
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        !guest.link
+    ) {
+
+        alert(
+            "Buat link personal terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    let phone =
+        guest.whatsapp
+            .replace(
+                /[^0-9]/g,
+                ""
+            );
+
+
+    if (
+        phone.startsWith("08")
+    ) {
+
+        phone =
+            "62" +
+            phone.substring(
+                1
+            );
+
+    }
+
+
+    if (
+        !phone
+    ) {
+
+        alert(
+            "Nomor WhatsApp belum diisi."
+        );
+
+        return;
+
+    }
+
+
+    const message =
+
+`Assalamu'alaikum Wr. Wb.
+
+Kepada Yth.
+${guest.name}
+
+Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dalam acara pernikahan kami.
+
+💍 Sri Hartina A. Maatiala & Baharudin M. Jakaria
+
+Silakan buka undangan digital melalui link berikut:
+
+${guest.link}
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir.
+
+Terima kasih atas doa dan restunya.
+
+Wassalamu'alaikum Wr. Wb.`;
+
+
+    const url =
+        `https://wa.me/${phone}?text=${
+            encodeURIComponent(
+                message
+            )
+        }`;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   REMOVE
+   ===================================================== */
+
+function removeGuest(
+    index
+) {
+
+    if (
+        !guests[index]
+    ) {
+
+        return;
+
+    }
+
+
+    const confirmed =
+        confirm(
+            `Hapus tamu "${guests[index].name || "ini"}"?`
+        );
+
+
+    if (
+        !confirmed
+    ) {
+
+        return;
+
+    }
+
+
+    guests.splice(
+        index,
+        1
+    );
+
+
+    renderTable();
+
+}
+
+
+/* =====================================================
+   COPY TEXT
+   ===================================================== */
+
+async function copyText(
+    text
+) {
+
+    /*
+     * Clipboard API.
+     */
+
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
+
+        try {
+
+            await navigator.clipboard
+                .writeText(
+                    text
+                );
+
+            return true;
+
+        } catch (
+            error
+        ) {
+
+            console.warn(
+                error
+            );
+
+        }
+
+    }
+
+
+    /*
+     * Fallback.
+     */
+
+    const textarea =
+        document.createElement(
+            "textarea"
+        );
+
+
+    textarea.value =
+        text;
+
+
+    textarea.style.position =
+        "fixed";
+
+
+    textarea.style.left =
+        "-9999px";
+
+
+    document.body.appendChild(
+        textarea
+    );
+
+
+    textarea.select();
+
+
+    let success =
+        false;
+
+
+    try {
+
+        success =
+            document.execCommand(
+                "copy"
+            );
+
+    } catch (
+        error
+    ) {
+
+        console.warn(
+            error
+        );
+
+    }
+
+
+    document.body.removeChild(
+        textarea
+    );
+
+
+    return success;
+
+}
+
+
+/* =====================================================
+   ESCAPE ATTRIBUTE
+   ===================================================== */
+
+function escapeHtmlAttribute(
+    value
+) {
+
+    return String(
+        value || ""
+    )
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
