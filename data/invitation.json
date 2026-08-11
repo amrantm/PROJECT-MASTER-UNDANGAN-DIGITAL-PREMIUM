@@ -1,0 +1,178 @@
+{
+  "project": {
+    "name": "PROJECT MASTER — UNDANGAN DIGITAL PREMIUM",
+    "version": "1.0.0",
+    "type": "wedding",
+    "language": "id-ID",
+    "timezone": "Asia/Makassar"
+  },
+
+  "event": {
+    "title": "Undangan Pernikahan",
+    "shortTitle": "Pernikahan",
+    "headline": "The Wedding Of",
+    "quote": "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.",
+    "quoteSource": "QS. Ar-Rum: 21"
+  },
+
+  "couple": {
+    "bride": {
+      "name": "Sri Hartina A. Maatiala",
+      "shortName": "Sri Hartina",
+      "role": "Mempelai Wanita",
+      "parents": {
+        "father": "Adnan B. Maatiala",
+        "mother": "Seha T. Maatiala"
+      },
+      "instagram": "",
+      "photo": "assets/img/bride.jpg"
+    },
+
+    "groom": {
+      "name": "Baharudin M. Jakaria",
+      "shortName": "Baharudin",
+      "role": "Mempelai Pria",
+      "parents": {
+        "father": "Marjuni Djakaria",
+        "mother": "Almh. Sawiyah R. Toliling"
+      },
+      "instagram": "",
+      "photo": "assets/img/groom.jpg"
+    }
+  },
+
+  "date": {
+    "dateISO": "2026-08-23",
+    "day": "Minggu",
+    "date": "23",
+    "month": "Agustus",
+    "year": "2026",
+    "time": "10.00 WITA",
+    "timezone": "WITA"
+  },
+
+  "venue": {
+    "name": "Tempat Acara Pernikahan",
+    "address": "Kelurahan Buol, Kecamatan Biau, Kabupaten Buol",
+    "city": "Buol",
+    "district": "Biau",
+    "province": "Sulawesi Tengah",
+    "country": "Indonesia",
+    "mapUrl": "https://maps.app.goo.gl/mic1jh7YBdU87kDi9",
+    "coordinates": {
+      "latitude": -1.155947,
+      "longitude": 121.435383
+    }
+  },
+
+  "contact": {
+    "whatsapp": "6281218825953",
+    "whatsappDisplay": "0812-1882-5953",
+    "whatsappMessage": "Assalamu'alaikum, saya ingin mengonfirmasi kehadiran pada acara pernikahan Sri Hartina A. Maatiala & Baharudin M. Jakaria."
+  },
+
+  "music": {
+    "enabled": true,
+    "autoplayAfterOpen": true,
+    "loop": true,
+    "volume": 0.75,
+    "file": "assets/music/wedding.mp3"
+  },
+
+  "gallery": {
+    "enabled": true,
+    "items": [
+      {
+        "image": "assets/img/gallery-01.jpg",
+        "alt": "Foto Sri Hartina dan Baharudin"
+      },
+      {
+        "image": "assets/img/gallery-02.jpg",
+        "alt": "Foto prewedding"
+      },
+      {
+        "image": "assets/img/gallery-03.jpg",
+        "alt": "Foto prewedding"
+      },
+      {
+        "image": "assets/img/gallery-04.jpg",
+        "alt": "Foto prewedding"
+      },
+      {
+        "image": "assets/img/gallery-05.jpg",
+        "alt": "Foto prewedding"
+      },
+      {
+        "image": "assets/img/gallery-06.jpg",
+        "alt": "Foto prewedding"
+      }
+    ]
+  },
+
+  "countdown": {
+    "enabled": true,
+    "target": "2026-08-23T10:00:00+08:00"
+  },
+
+  "gift": {
+    "enabled": true,
+
+    "bankAccounts": [
+      {
+        "bank": "BRI",
+        "accountNumber": "363701037637537",
+        "accountName": "Nurseha Ma'atiala"
+      }
+    ]
+  },
+
+  "rsvp": {
+    "enabled": true,
+    "title": "Konfirmasi Kehadiran",
+    "description": "Mohon konfirmasi kehadiran Anda pada acara pernikahan kami."
+  },
+
+  "guest": {
+    "enabled": true,
+    "parameter": "kpd",
+    "defaultName": "Tamu Undangan"
+  },
+
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+  },
+
+  "theme": {
+    "name": "Elegant Wedding",
+    "primaryColor": "#0f5132",
+    "secondaryColor": "#d4af37",
+    "backgroundColor": "#f8f5ef",
+    "textColor": "#2c2c2c",
+    "accentColor": "#ffffff"
+  },
+
+  "animations": {
+    "enabled": true,
+    "smoothScroll": true,
+    "pageTransition": true,
+    "parallax": true,
+    "textReveal": true,
+    "imageReveal": true,
+    "stagger": true
+  },
+
+  "sections": {
+    "opening": true,
+    "couple": true,
+    "quote": true,
+    "event": true,
+    "countdown": true,
+    "gallery": true,
+    "rsvp": true,
+    "gift": true,
+    "location": true,
+    "closing": true
+  }
+}
