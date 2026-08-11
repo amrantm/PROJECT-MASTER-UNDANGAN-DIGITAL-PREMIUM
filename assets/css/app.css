@@ -1,0 +1,1781 @@
+/* =========================================================
+   PROJECT MASTER — UNDANGAN DIGITAL PREMIUM
+   APP CSS — CORE VISUAL ENGINE
+   Mobile First
+   ========================================================= */
+
+
+/* =========================================================
+   01. ROOT THEME
+   ========================================================= */
+
+:root {
+
+    /* COLOR */
+
+    --color-bg:
+        #120d0a;
+
+    --color-bg-soft:
+        #1d1510;
+
+    --color-surface:
+        rgba(255, 255, 255, 0.08);
+
+    --color-surface-strong:
+        rgba(255, 255, 255, 0.14);
+
+    --color-white:
+        #ffffff;
+
+    --color-white-soft:
+        rgba(255, 255, 255, 0.78);
+
+    --color-white-muted:
+        rgba(255, 255, 255, 0.55);
+
+    --color-gold:
+        #d8b477;
+
+    --color-gold-light:
+        #f0d7a8;
+
+    --color-gold-dark:
+        #9f7a45;
+
+    --color-border:
+        rgba(255, 255, 255, 0.24);
+
+
+    /* TYPOGRAPHY */
+
+    --font-display:
+        "Playfair Display",
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    --font-body:
+        "Inter",
+        "Poppins",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+
+    /* RADIUS */
+
+    --radius-small:
+        10px;
+
+    --radius-medium:
+        18px;
+
+    --radius-large:
+        28px;
+
+    --radius-pill:
+        999px;
+
+
+    /* SHADOW */
+
+    --shadow-soft:
+        0 15px 50px rgba(0, 0, 0, 0.18);
+
+    --shadow-heavy:
+        0 25px 80px rgba(0, 0, 0, 0.35);
+
+
+    /* TRANSITION */
+
+    --transition-fast:
+        0.25s ease;
+
+    --transition-normal:
+        0.5s cubic-bezier(.22, 1, .36, 1);
+
+    --transition-slow:
+        1s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+/* =========================================================
+   02. APPLICATION CONTAINER
+   ========================================================= */
+
+#app {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    background:
+        var(--color-bg);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   03. GENERIC SLIDE
+   ========================================================= */
+
+.slide {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    height: 100dvh;
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   04. SLIDE INNER
+   ========================================================= */
+
+.slide-inner {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(
+        100%,
+        430px
+    );
+
+    padding:
+
+        40px
+
+        24px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   05. OPENING
+   ========================================================= */
+
+.slide-opening {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 35%,
+            #493126 0%,
+            #251811 42%,
+            #100b08 100%
+        );
+
+}
+
+
+.slide-opening::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0, 0, 0, 0.38) 100%
+        );
+
+}
+
+
+.opening-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.58)
+        );
+
+}
+
+
+.opening-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(
+        100%,
+        390px
+    );
+
+    padding: 25px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   06. EYEBROW
+   ========================================================= */
+
+.eyebrow {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family:
+        var(--font-body);
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color:
+        var(--color-white-soft);
+
+}
+
+
+/* =========================================================
+   07. OPENING TITLE
+   ========================================================= */
+
+.opening-title {
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            62px,
+            18vw,
+            92px
+        );
+
+    font-weight: 400;
+
+    line-height: 0.88;
+
+    letter-spacing: -2px;
+
+    color:
+        var(--color-white);
+
+    text-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.28);
+
+}
+
+
+/* =========================================================
+   08. OPENING SUBTITLE
+   ========================================================= */
+
+.opening-subtitle {
+
+    max-width: 290px;
+
+    margin:
+        25px auto 0;
+
+    font-size: 12px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    color:
+        var(--color-white-soft);
+
+}
+
+
+/* =========================================================
+   09. OPEN BUTTON
+   ========================================================= */
+
+.btn-open {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 220px;
+
+    min-height: 50px;
+
+    margin-top: 34px;
+
+    padding:
+        14px 25px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.5);
+
+    border-radius:
+        var(--radius-pill);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        var(--color-white);
+
+    font-family:
+        var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+
+}
+
+
+.btn-open::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 2px;
+
+    border-radius:
+        inherit;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+
+}
+
+
+.btn-open:active {
+
+    transform:
+        scale(0.95);
+
+}
+
+
+.btn-open:hover {
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    border-color:
+        rgba(255, 255, 255, 0.8);
+
+}
+
+
+/* =========================================================
+   10. HERO
+   ========================================================= */
+
+.slide-hero {
+
+    color:
+        var(--color-white);
+
+    background:
+        #1b120e;
+
+}
+
+
+/* =========================================================
+   11. HERO BACKGROUND
+   ========================================================= */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: -6%;
+
+    z-index: -3;
+
+    background-image:
+
+        url("../img/cover.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    transform:
+        scale(1.04);
+
+    will-change:
+        transform;
+
+}
+
+
+/* =========================================================
+   12. HERO OVERLAY
+   ========================================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(16, 9, 6, 0.25),
+            rgba(16, 9, 6, 0.45)
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(16, 9, 6, 0.75),
+            transparent 65%
+        );
+
+}
+
+
+/* =========================================================
+   13. HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(
+            100%,
+            430px
+        );
+
+    padding:
+        30px 24px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   14. COUPLE NAME
+   ========================================================= */
+
+.couple-name {
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            48px,
+            13vw,
+            76px
+        );
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 12px 40px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+.couple-name span {
+
+    display: block;
+
+    margin:
+        12px 0;
+
+    font-size:
+        34px;
+
+    line-height: 1;
+
+    color:
+        var(--color-gold-light);
+
+}
+
+
+/* =========================================================
+   15. EVENT DATE
+   ========================================================= */
+
+.event-date {
+
+    margin-top:
+        28px;
+
+    font-family:
+        var(--font-body);
+
+    font-size:
+        10px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        6px;
+
+    color:
+        var(--color-white-soft);
+
+}
+
+
+/* =========================================================
+   16. GENERIC SECTION
+   ========================================================= */
+
+.section-label {
+
+    font-family:
+        var(--font-body);
+
+    font-size:
+        9px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        4px;
+
+    text-transform:
+        uppercase;
+
+    color:
+        var(--color-gold-dark);
+
+}
+
+
+.section-title {
+
+    margin-top:
+        14px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            38px,
+            10vw,
+            54px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    color:
+        #2e2119;
+
+}
+
+
+/* =========================================================
+   17. INTRO
+   ========================================================= */
+
+.slide-intro {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 25%,
+            #fffdf9 0%,
+            #f6eee4 65%,
+            #eadccd 100%
+        );
+
+    color:
+        #34261e;
+
+}
+
+
+.slide-intro .slide-inner {
+
+    max-width:
+        390px;
+
+}
+
+
+.ornament {
+
+    display:
+        block;
+
+    margin-bottom:
+        28px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        38px;
+
+    color:
+        var(--color-gold-dark);
+
+}
+
+
+.quote {
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            23px,
+            6vw,
+            31px
+        );
+
+    line-height:
+        1.45;
+
+    color:
+        #392b22;
+
+}
+
+
+.quote-source {
+
+    margin-top:
+        25px;
+
+    font-family:
+        var(--font-body);
+
+    font-size:
+        9px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #927454;
+
+}
+
+
+/* =========================================================
+   18. COUPLE SECTION
+   ========================================================= */
+
+.slide-couple {
+
+    background:
+        #f8f3ec;
+
+    color:
+        #33251d;
+
+}
+
+
+.couple-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        35px;
+
+}
+
+
+.person {
+
+    min-width:
+        0;
+
+}
+
+
+.person-photo {
+
+    width:
+        112px;
+
+    height:
+        145px;
+
+    margin:
+        0 auto 17px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        70px 70px 16px 16px;
+
+    border:
+        3px solid
+        rgba(180, 142, 91, 0.45);
+
+    background:
+        #ddd;
+
+    box-shadow:
+        var(--shadow-soft);
+
+}
+
+
+.person-photo img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+}
+
+
+.person h2 {
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        25px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.05;
+
+}
+
+
+.person p {
+
+    margin-top:
+        10px;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.7;
+
+    color:
+        #7b6756;
+
+}
+
+
+.couple-divider {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        27px;
+
+    color:
+        var(--color-gold-dark);
+
+}
+
+
+/* =========================================================
+   19. EVENT SECTION
+   ========================================================= */
+
+.slide-event {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #eee0d2,
+            #faf6ef
+        );
+
+    color:
+        #33251d;
+
+}
+
+
+.event-card {
+
+    width:
+        100%;
+
+    margin-top:
+        32px;
+
+    padding:
+        30px 22px;
+
+    border:
+        1px solid
+        rgba(148, 112, 73, 0.2);
+
+    border-radius:
+        var(--radius-large);
+
+    background:
+        rgba(255, 255, 255, 0.62);
+
+    box-shadow:
+        var(--shadow-soft);
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+}
+
+
+.event-icon {
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        34px;
+
+    color:
+        var(--color-gold-dark);
+
+}
+
+
+.event-card h3 {
+
+    margin-top:
+        16px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        27px;
+
+    font-weight:
+        500;
+
+}
+
+
+.event-card strong {
+
+    display:
+        block;
+
+    margin-top:
+        8px;
+
+    font-family:
+        var(--font-body);
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.event-card p {
+
+    margin-top:
+        8px;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+
+    color:
+        #756150;
+
+}
+
+
+.event-divider {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    margin:
+        20px auto;
+
+    background:
+        rgba(151, 113, 71, 0.35);
+
+}
+
+
+.btn-location {
+
+    min-width:
+        170px;
+
+    min-height:
+        43px;
+
+    margin-top:
+        18px;
+
+    padding:
+        11px 20px;
+
+    border:
+        1px solid
+        rgba(145, 108, 66, 0.5);
+
+    border-radius:
+        var(--radius-pill);
+
+    background:
+        transparent;
+
+    color:
+        #725537;
+
+    font-size:
+        9px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        2px;
+
+    transition:
+        var(--transition-fast);
+
+}
+
+
+.btn-location:active {
+
+    transform:
+        scale(0.95);
+
+}
+
+
+/* =========================================================
+   20. GALLERY
+   ========================================================= */
+
+.slide-gallery {
+
+    background:
+        #17110e;
+
+    color:
+        #fff;
+
+}
+
+
+.slide-gallery .section-label {
+
+    color:
+        var(--color-gold-light);
+
+}
+
+
+.slide-gallery .section-title {
+
+    color:
+        #fff;
+
+}
+
+
+.gallery-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        9px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.gallery-item {
+
+    position:
+        relative;
+
+    aspect-ratio:
+        1 / 1.25;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        #2b201a;
+
+}
+
+
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3) {
+
+    transform:
+        translateY(18px);
+
+}
+
+
+.gallery-item img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 1.2s
+        cubic-bezier(
+            .22,
+            1,
+            .36,
+            1
+        );
+
+}
+
+
+.gallery-item:active img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =========================================================
+   21. RSVP
+   ========================================================= */
+
+.slide-rsvp {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            #4a3326,
+            #1d130e 70%
+        );
+
+    color:
+        #fff;
+
+}
+
+
+.slide-rsvp .section-label {
+
+    color:
+        var(--color-gold-light);
+
+}
+
+
+.slide-rsvp .section-title {
+
+    color:
+        #fff;
+
+}
+
+
+.rsvp-text {
+
+    max-width:
+        320px;
+
+    margin:
+        22px auto 0;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--color-white-soft);
+
+}
+
+
+.rsvp-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        11px;
+
+    margin-top:
+        28px;
+
+}
+
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-form select {
+
+    width:
+        100%;
+
+    padding:
+        14px 16px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color:
+        #fff;
+
+    font-size:
+        12px;
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+}
+
+
+.rsvp-form input::placeholder,
+.rsvp-form textarea::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+}
+
+
+.rsvp-form select {
+
+    color:
+        rgba(255, 255, 255, 0.8);
+
+}
+
+
+.rsvp-form option {
+
+    color:
+        #241811;
+
+}
+
+
+.rsvp-form textarea {
+
+    min-height:
+        105px;
+
+    resize:
+        none;
+
+}
+
+
+.btn-submit {
+
+    width:
+        100%;
+
+    min-height:
+        48px;
+
+    margin-top:
+        5px;
+
+    border-radius:
+        var(--radius-pill);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-gold-light),
+            var(--color-gold)
+        );
+
+    color:
+        #39271b;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+/* =========================================================
+   22. CLOSING
+   ========================================================= */
+
+.slide-closing {
+
+    background-image:
+
+        url("../img/cover.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+}
+
+
+.closing-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(12, 7, 5, 0.38),
+            rgba(12, 7, 5, 0.82)
+        );
+
+}
+
+
+.closing-content {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    width:
+        min(
+            100%,
+            390px
+        );
+
+    padding:
+        25px;
+
+    text-align:
+        center;
+
+}
+
+
+.closing-content h2 {
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            46px,
+            12vw,
+            68px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        0.95;
+
+}
+
+
+.closing-content h2 span {
+
+    display:
+        block;
+
+    margin:
+        10px 0;
+
+    font-size:
+        30px;
+
+    color:
+        var(--color-gold-light);
+
+}
+
+
+.closing-content > p:not(.eyebrow) {
+
+    max-width:
+        310px;
+
+    margin:
+        25px auto 0;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.9;
+
+    color:
+        var(--color-white-soft);
+
+}
+
+
+.closing-heart {
+
+    margin-top:
+        30px;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        42px;
+
+    color:
+        var(--color-gold-light);
+
+}
+
+
+/* =========================================================
+   23. MUSIC BUTTON
+   ========================================================= */
+
+.music-button {
+
+    position:
+        fixed;
+
+    right:
+        18px;
+
+    bottom:
+        18px;
+
+    z-index:
+        999;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.32);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(20, 12, 8, 0.58);
+
+    color:
+        #fff;
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        19px;
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+.music-button.is-playing {
+
+    border-color:
+        var(--color-gold-light);
+
+    color:
+        var(--color-gold-light);
+
+}
+
+
+/* =========================================================
+   24. MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .slide-inner {
+
+        padding-left:
+            20px;
+
+        padding-right:
+            20px;
+
+    }
+
+
+    .couple-card {
+
+        gap:
+            4px;
+
+    }
+
+
+    .person-photo {
+
+        width:
+            105px;
+
+        height:
+            138px;
+
+    }
+
+
+    .person h2 {
+
+        font-size:
+            23px;
+
+    }
+
+}
+
+
+/* =========================================================
+   25. SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .slide {
+
+        min-height:
+            580px;
+
+    }
+
+
+    .slide-inner {
+
+        padding-left:
+            16px;
+
+        padding-right:
+            16px;
+
+    }
+
+
+    .opening-title {
+
+        font-size:
+            58px;
+
+    }
+
+
+    .couple-name {
+
+        font-size:
+            43px;
+
+    }
+
+
+    .person-photo {
+
+        width:
+            92px;
+
+        height:
+            122px;
+
+    }
+
+
+    .person h2 {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .event-card {
+
+        padding:
+            25px 18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   26. LANDSCAPE PHONE
+   ========================================================= */
+
+@media (
+    orientation: landscape
+) and (
+    max-height: 600px
+) {
+
+    .slide-inner {
+
+        padding-top:
+            25px;
+
+        padding-bottom:
+            25px;
+
+    }
+
+
+    .opening-title {
+
+        font-size:
+            50px;
+
+    }
+
+
+    .opening-subtitle {
+
+        margin-top:
+            12px;
+
+    }
+
+
+    .btn-open {
+
+        margin-top:
+            18px;
+
+    }
+
+}
