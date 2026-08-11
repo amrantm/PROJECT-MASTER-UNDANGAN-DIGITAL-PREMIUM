@@ -1,0 +1,1945 @@
+/* =========================================================
+   PROJECT MASTER — UNDANGAN DIGITAL PREMIUM
+   ANIMATIONS CSS
+   Cinematic Mobile Animation Engine
+   ========================================================= */
+
+
+/* =========================================================
+   01. ANIMATION VARIABLES
+   ========================================================= */
+
+:root {
+
+    --ease-cinematic:
+        cubic-bezier(
+            .22,
+            1,
+            .36,
+            1
+        );
+
+    --ease-smooth:
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        );
+
+    --ease-soft:
+        cubic-bezier(
+            .25,
+            .8,
+            .25,
+            1
+        );
+
+}
+
+
+/* =========================================================
+   02. DEFAULT ANIMATION STATE
+   ========================================================= */
+
+[data-animation] {
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+/* =========================================================
+   03. ACTIVE ANIMATION
+   ========================================================= */
+
+[data-animation].is-visible {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   04. FADE
+   ========================================================= */
+
+[data-animation="fade"] {
+
+    transform:
+        translateY(0);
+
+}
+
+
+[data-animation="fade"].is-visible {
+
+    animation:
+        fadeIn
+        1.2s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   05. FADE UP
+   ========================================================= */
+
+[data-animation="fade-up"] {
+
+    transform:
+        translateY(35px);
+
+}
+
+
+[data-animation="fade-up"].is-visible {
+
+    animation:
+        fadeUp
+        1s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   06. FADE DOWN
+   ========================================================= */
+
+[data-animation="fade-down"] {
+
+    transform:
+        translateY(-30px);
+
+}
+
+
+[data-animation="fade-down"].is-visible {
+
+    animation:
+        fadeDown
+        1s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   07. SLIDE LEFT
+   ========================================================= */
+
+[data-animation="slide-left"] {
+
+    transform:
+        translateX(-60px);
+
+}
+
+
+[data-animation="slide-left"].is-visible {
+
+    animation:
+        slideLeft
+        1s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   08. SLIDE RIGHT
+   ========================================================= */
+
+[data-animation="slide-right"] {
+
+    transform:
+        translateX(60px);
+
+}
+
+
+[data-animation="slide-right"].is-visible {
+
+    animation:
+        slideRight
+        1s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   09. ZOOM IN
+   ========================================================= */
+
+[data-animation="zoom-in"] {
+
+    transform:
+        scale(.82);
+
+}
+
+
+[data-animation="zoom-in"].is-visible {
+
+    animation:
+        zoomIn
+        1.2s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   10. ZOOM OUT
+   ========================================================= */
+
+[data-animation="zoom-out"] {
+
+    transform:
+        scale(1.15);
+
+}
+
+
+[data-animation="zoom-out"].is-visible {
+
+    animation:
+        zoomOut
+        1.3s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   11. BLUR REVEAL
+   ========================================================= */
+
+.blur-reveal {
+
+    opacity: 0;
+
+    filter:
+        blur(12px);
+
+    transform:
+        scale(.97);
+
+}
+
+
+.blur-reveal.is-visible {
+
+    animation:
+        blurReveal
+        1.4s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   12. CINEMATIC REVEAL
+   ========================================================= */
+
+.cinematic-reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px)
+        scale(.96);
+
+    filter:
+        blur(5px);
+
+}
+
+
+.cinematic-reveal.is-visible {
+
+    animation:
+        cinematicReveal
+        1.4s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+/* =========================================================
+   13. KEYFRAME — FADE
+   ========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================================
+   14. KEYFRAME — FADE UP
+   ========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   15. KEYFRAME — FADE DOWN
+   ========================================================= */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   16. KEYFRAME — SLIDE LEFT
+   ========================================================= */
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   17. KEYFRAME — SLIDE RIGHT
+   ========================================================= */
+
+@keyframes slideRight {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   18. KEYFRAME — ZOOM IN
+   ========================================================= */
+
+@keyframes zoomIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.82);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   19. KEYFRAME — ZOOM OUT
+   ========================================================= */
+
+@keyframes zoomOut {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(1.15);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   20. KEYFRAME — BLUR REVEAL
+   ========================================================= */
+
+@keyframes blurReveal {
+
+    from {
+
+        opacity: 0;
+
+        filter:
+            blur(12px);
+
+        transform:
+            scale(.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        filter:
+            blur(0);
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   21. KEYFRAME — CINEMATIC REVEAL
+   ========================================================= */
+
+@keyframes cinematicReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(45px)
+            scale(.96);
+
+        filter:
+            blur(5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   22. OPENING CINEMATIC
+   ========================================================= */
+
+.slide-opening .opening-content {
+
+    animation:
+        openingReveal
+        1.8s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes openingReveal {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.96);
+
+        filter:
+            blur(8px);
+
+    }
+
+    55% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   23. OPENING TITLE
+   ========================================================= */
+
+.opening-title {
+
+    animation:
+        titleReveal
+        1.8s
+        .2s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes titleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.75)
+            translateY(20px);
+
+        letter-spacing:
+            12px;
+
+        filter:
+            blur(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+        letter-spacing:
+            -2px;
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   24. OPENING BUTTON
+   ========================================================= */
+
+.btn-open {
+
+    animation:
+        buttonReveal
+        1.2s
+        1.1s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes buttonReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(.94);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   25. BUTTON GLOW
+   ========================================================= */
+
+.btn-open {
+
+    animation:
+        buttonReveal
+        1.2s
+        1.1s
+        var(--ease-cinematic)
+        both,
+        buttonGlow
+        3s
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes buttonGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 10px 30px
+            rgba(0, 0, 0, .18);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 10px 40px
+            rgba(216, 180, 119, .22);
+
+    }
+
+}
+
+
+/* =========================================================
+   26. HERO KEN BURNS
+   ========================================================= */
+
+.hero-background {
+
+    animation:
+        heroKenBurns
+        18s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes heroKenBurns {
+
+    0% {
+
+        transform:
+            scale(1.04)
+            translate3d(0, 0, 0);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1.13)
+            translate3d(-1%, -1%, 0);
+
+    }
+
+}
+
+
+/* =========================================================
+   27. HERO OVERLAY BREATHING
+   ========================================================= */
+
+.hero-overlay {
+
+    animation:
+        overlayBreathing
+        8s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes overlayBreathing {
+
+    from {
+
+        opacity:
+            .88;
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* =========================================================
+   28. COUPLE NAME
+   ========================================================= */
+
+.couple-name {
+
+    animation:
+        coupleReveal
+        1.7s
+        .25s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes coupleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.94);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   29. EVENT DATE
+   ========================================================= */
+
+.event-date {
+
+    animation:
+        dateReveal
+        1.2s
+        1s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes dateReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+        letter-spacing:
+            12px;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        letter-spacing:
+            6px;
+
+    }
+
+}
+
+
+/* =========================================================
+   30. FLOATING ORNAMENT
+   ========================================================= */
+
+.ornament {
+
+    animation:
+        ornamentFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes ornamentFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(3deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   31. QUOTE REVEAL
+   ========================================================= */
+
+.quote {
+
+    animation:
+        quoteReveal
+        1.5s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes quoteReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+        filter:
+            blur(5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   32. COUPLE PHOTO HOVER / FLOAT
+   ========================================================= */
+
+.person-photo {
+
+    transition:
+        transform
+        1s
+        var(--ease-cinematic);
+
+}
+
+
+.person-photo:hover {
+
+    transform:
+        translateY(-6px)
+        scale(1.025);
+
+}
+
+
+/* =========================================================
+   33. COUPLE PHOTO SHINE
+   ========================================================= */
+
+.person-photo {
+
+    position:
+        relative;
+
+}
+
+
+.person-photo::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -120%;
+
+    width:
+        60%;
+
+    height:
+        100%;
+
+    transform:
+        skewX(-20deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.22),
+            transparent
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+.person-photo:hover::after {
+
+    animation:
+        photoShine
+        1.2s
+        ease;
+
+}
+
+
+@keyframes photoShine {
+
+    from {
+
+        left:
+            -120%;
+
+    }
+
+    to {
+
+        left:
+            140%;
+
+    }
+
+}
+
+
+/* =========================================================
+   34. COUPLE DIVIDER
+   ========================================================= */
+
+.couple-divider {
+
+    animation:
+        heartbeat
+        2.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    15% {
+
+        transform:
+            scale(1.12);
+
+    }
+
+    30% {
+
+        transform:
+            scale(1);
+
+    }
+
+    45% {
+
+        transform:
+            scale(1.08);
+
+    }
+
+    60% {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   35. EVENT CARD
+   ========================================================= */
+
+.event-card {
+
+    animation:
+        cardReveal
+        1.2s
+        .3s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes cardReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(45px)
+            scale(.95);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   36. EVENT ICON
+   ========================================================= */
+
+.event-icon {
+
+    animation:
+        iconFloat
+        3.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+
+    }
+
+}
+
+
+/* =========================================================
+   37. GALLERY ITEMS
+   ========================================================= */
+
+.gallery-item {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(35px)
+        scale(.94);
+
+}
+
+
+.gallery-item.is-visible {
+
+    animation:
+        galleryReveal
+        1s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+.gallery-item:nth-child(1).is-visible {
+
+    animation-delay:
+        .05s;
+
+}
+
+
+.gallery-item:nth-child(2).is-visible {
+
+    animation-delay:
+        .18s;
+
+}
+
+
+.gallery-item:nth-child(3).is-visible {
+
+    animation-delay:
+        .31s;
+
+}
+
+
+.gallery-item:nth-child(4).is-visible {
+
+    animation-delay:
+        .44s;
+
+}
+
+
+@keyframes galleryReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px)
+            scale(.94);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   38. GALLERY IMAGE CINEMATIC ZOOM
+   ========================================================= */
+
+.gallery-item img {
+
+    animation:
+        galleryImageZoom
+        12s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes galleryImageZoom {
+
+    from {
+
+        transform:
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            scale(1.06);
+
+    }
+
+}
+
+
+/* =========================================================
+   39. RSVP FORM
+   ========================================================= */
+
+.rsvp-form {
+
+    animation:
+        formReveal
+        1.2s
+        .35s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes formReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(35px);
+
+        filter:
+            blur(4px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   40. RSVP INPUT FOCUS
+   ========================================================= */
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-form select {
+
+    transition:
+        border-color
+        .35s
+        ease,
+
+        background
+        .35s
+        ease,
+
+        transform
+        .35s
+        ease;
+
+}
+
+
+.rsvp-form input:focus,
+.rsvp-form textarea:focus,
+.rsvp-form select:focus {
+
+    border-color:
+        rgba(240, 215, 168, .65);
+
+    background:
+        rgba(255, 255, 255, .11);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   41. SUBMIT BUTTON
+   ========================================================= */
+
+.btn-submit {
+
+    transition:
+        transform
+        .25s
+        ease,
+
+        box-shadow
+        .25s
+        ease;
+
+}
+
+
+.btn-submit:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+.btn-submit:hover {
+
+    box-shadow:
+        0 12px 35px
+        rgba(216, 180, 119, .2);
+
+}
+
+
+/* =========================================================
+   42. CLOSING REVEAL
+   ========================================================= */
+
+.closing-content {
+
+    animation:
+        closingReveal
+        1.7s
+        .25s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes closingReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(30px)
+            scale(.96);
+
+        filter:
+            blur(7px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   43. CLOSING HEART
+   ========================================================= */
+
+.closing-heart {
+
+    animation:
+        heartbeat
+        2.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================================
+   44. MUSIC BUTTON
+   ========================================================= */
+
+.music-button {
+
+    transition:
+        transform
+        .35s
+        var(--ease-cinematic),
+
+        border-color
+        .35s
+        ease,
+
+        background
+        .35s
+        ease;
+
+}
+
+
+.music-button.is-playing {
+
+    animation:
+        musicPulse
+        2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.08);
+
+    }
+
+}
+
+
+/* =========================================================
+   45. FLOATING LIGHT
+   ========================================================= */
+
+.slide::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    top:
+        -80px;
+
+    right:
+        -80px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 220, 170, .06);
+
+    filter:
+        blur(30px);
+
+    pointer-events:
+        none;
+
+    animation:
+        ambientLight
+        8s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes ambientLight {
+
+    from {
+
+        transform:
+            translate(0, 0)
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            translate(-30px, 25px)
+            scale(1.25);
+
+    }
+
+}
+
+
+/* =========================================================
+   46. SECOND AMBIENT LIGHT
+   ========================================================= */
+
+.slide::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    bottom:
+        -80px;
+
+    left:
+        -70px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 205, 145, .045);
+
+    filter:
+        blur(35px);
+
+    pointer-events:
+        none;
+
+    animation:
+        ambientLightTwo
+        10s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+@keyframes ambientLightTwo {
+
+    from {
+
+        transform:
+            translate(0, 0);
+
+    }
+
+    to {
+
+        transform:
+            translate(40px, -25px);
+
+    }
+
+}
+
+
+/* =========================================================
+   47. STAGGER SYSTEM
+   ========================================================= */
+
+.stagger > * {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(25px);
+
+}
+
+
+.stagger.is-visible > * {
+
+    animation:
+        staggerReveal
+        .9s
+        var(--ease-cinematic)
+        forwards;
+
+}
+
+
+.stagger.is-visible > *:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.stagger.is-visible > *:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.stagger.is-visible > *:nth-child(3) {
+    animation-delay: .25s;
+}
+
+.stagger.is-visible > *:nth-child(4) {
+    animation-delay: .35s;
+}
+
+.stagger.is-visible > *:nth-child(5) {
+    animation-delay: .45s;
+}
+
+.stagger.is-visible > *:nth-child(6) {
+    animation-delay: .55s;
+}
+
+
+@keyframes staggerReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   48. PAGE TRANSITION
+   ========================================================= */
+
+.page-enter {
+
+    animation:
+        pageEnter
+        1s
+        var(--ease-cinematic)
+        both;
+
+}
+
+
+@keyframes pageEnter {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(1.04);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   49. SHIMMER
+   ========================================================= */
+
+.shimmer {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+}
+
+
+.shimmer::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -120%;
+
+    width:
+        60%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.16),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+}
+
+
+.shimmer.is-visible::after {
+
+    animation:
+        shimmerMove
+        1.4s
+        ease
+        .3s
+        both;
+
+}
+
+
+@keyframes shimmerMove {
+
+    from {
+
+        left:
+            -120%;
+
+    }
+
+    to {
+
+        left:
+            140%;
+
+    }
+
+}
+
+
+/* =========================================================
+   50. MOBILE PERFORMANCE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-background,
+    .gallery-item img {
+
+        will-change:
+            transform;
+
+    }
+
+}
+
+
+/* =========================================================
+   51. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+    [data-animation] {
+
+        opacity:
+            1 !important;
+
+        transform:
+            none !important;
+
+        filter:
+            none !important;
+
+    }
+
+}
