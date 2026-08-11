@@ -303,60 +303,47 @@
        09. OPEN ACTION
     ===================================================== */
 
-    App.openInvitation = function () {
+App.openInvitation = function () {
 
-        if (this.state.opened) {
-            return;
-        }
+    if (this.state.opened) {
+        return;
+    }
 
+    this.state.opened = true;
 
-        this.state.opened =
-            true;
+    // Tandai body bahwa undangan sudah dibuka
+    document.body.classList.add("invitation-open");
 
+    // Ambil opening screen
+    const opening = document.querySelector(".slide-opening");
 
-        document.body.classList.add(
-            "invitation-open"
-        );
+    if (opening) {
 
+        opening.classList.add("opening-complete");
 
-        const opening =
-            document.querySelector(
-                ".slide-opening"
-            );
+        // Pastikan opening tidak lagi menghalangi
+        setTimeout(function () {
 
+            opening.style.pointerEvents = "none";
 
-        if (opening) {
+        }, 900);
+    }
 
-            opening.classList.add(
-                "opening-complete"
-            );
+    // Aktifkan aplikasi
+    const app = document.querySelector("#app");
 
-        }
+    if (app) {
+        app.classList.add("is-open");
+    }
 
+    // Aktifkan slide pertama
+    this.startFirstSlide();
 
-        const app =
-            document.querySelector(
-                "#app"
-            );
-
-
-        if (app) {
-
-            app.classList.add(
-                "is-open"
-            );
-
-        }
-
-
-        this.startFirstSlide();
-
-
-        this.dispatchEvent(
-            "invitation:opened"
-        );
-
-    };
+    // Event untuk module lain
+    this.dispatchEvent(
+        "invitation:opened"
+    );
+};
 
 
     /* =====================================================
