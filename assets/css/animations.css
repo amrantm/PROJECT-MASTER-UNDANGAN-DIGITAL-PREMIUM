@@ -1545,7 +1545,36 @@
 
 }
 
+.music-button.is-playing [data-music-icon] {
 
+    display: inline-block;
+
+    animation:
+        musicRotate
+        4s
+        linear
+        infinite;
+
+}
+
+
+@keyframes musicRotate {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
 @keyframes musicPulse {
 
     0%,
