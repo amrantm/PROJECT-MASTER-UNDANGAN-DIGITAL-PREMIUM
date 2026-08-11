@@ -1,1076 +1,620 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <meta
+        name="theme-color"
+        content="#111111"
+    >
+
+    <meta
+        name="description"
+        content="Undangan Digital Premium"
+    >
+
+    <title>Undangan Digital Premium</title>
+
+    <!-- ==============================
+         CSS
+    =============================== -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/app.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/animations.css"
+    >
 
-<meta
-  name="viewport"
-  content="width=device-width,
-  initial-scale=1.0,
-  maximum-scale=1.0,
-  user-scalable=no"
->
-
-<meta name="theme-color" content="#17120f">
-
-<title>Undangan Digital Premium</title>
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html,
-body{
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  background:#111;
-  font-family:Georgia,serif;
-}
-
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-/* ==================================================
-   MOBILE CONTAINER
-================================================== */
-
-.invitation{
-
-  position:relative;
-
-  width:100%;
-  height:100dvh;
-
-  max-width:480px;
-
-  overflow:hidden;
-
-  background:#17120f;
-
-  color:#fff;
-}
-
-/* ==================================================
-   SLIDE ENGINE
-================================================== */
-
-.slides{
-
-  width:100%;
-  height:100%;
-
-  position:relative;
-}
-
-.slide{
-
-  position:absolute;
-
-  inset:0;
-
-  width:100%;
-  height:100%;
-
-  display:flex;
-
-  justify-content:center;
-  align-items:center;
-
-  text-align:center;
-
-  opacity:0;
-
-  visibility:hidden;
-
-  transform:scale(1.04);
-
-  transition:
-    opacity 1s ease,
-    transform 1.4s cubic-bezier(.22,1,.36,1);
-
-}
-
-.slide.active{
-
-  opacity:1;
-
-  visibility:visible;
-
-  transform:scale(1);
-
-}
-
-/* ==================================================
-   BACKGROUND
-================================================== */
-
-.slide::before{
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.15),
-      rgba(0,0,0,.65)
-    );
-
-  z-index:1;
-
-}
-
-.slide-content{
-
-  position:relative;
-
-  z-index:5;
-
-  width:90%;
-
-  max-width:420px;
-
-}
-
-/* ==================================================
-   COVER
-================================================== */
-
-.cover{
-
-  background-image:
-    url("assets/images/cover.jpg");
-
-  background-size:cover;
-
-  background-position:center;
-
-  animation:
-    coverZoom 12s ease-in-out infinite alternate;
-
-}
-
-@keyframes coverZoom{
-
-  from{
-    background-size:100%;
-  }
-
-  to{
-    background-size:115%;
-  }
-
-}
-
-/* ==================================================
-   TYPOGRAPHY
-================================================== */
-
-.label{
-
-  font-size:11px;
-
-  letter-spacing:5px;
-
-  margin-bottom:25px;
-
-  opacity:.85;
-
-}
-
-.names{
-
-  font-size:42px;
-
-  line-height:1.05;
-
-  font-weight:400;
-
-}
-
-.and{
-
-  display:block;
-
-  font-size:30px;
-
-  margin:10px 0;
-
-}
-
-.date{
-
-  margin-top:25px;
-
-  font-size:14px;
-
-  letter-spacing:5px;
-
-}
-
-/* ==================================================
-   BUTTON
-================================================== */
-
-.btn{
-
-  margin-top:35px;
-
-  display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  min-width:210px;
-
-  padding:15px 25px;
-
-  border:
-
-    1px solid
-
-    rgba(255,255,255,.7);
-
-  border-radius:50px;
-
-  background:
-
-    rgba(255,255,255,.08);
-
-  color:white;
-
-  text-decoration:none;
-
-  letter-spacing:2px;
-
-  font-size:13px;
-
-  backdrop-filter:blur(10px);
-
-  transition:.3s;
-
-}
-
-.btn:active{
-
-  transform:scale(.94);
-
-}
-
-/* ==================================================
-   ANIMASI TEXT
-================================================== */
-
-.slide.active .label{
-
-  animation:
-    fadeUp 1s .2s both;
-
-}
-
-.slide.active .names{
-
-  animation:
-    fadeUp 1.2s .5s both;
-
-}
-
-.slide.active .date{
-
-  animation:
-    fadeUp 1s .9s both;
-
-}
-
-.slide.active .btn{
-
-  animation:
-    fadeUp 1s 1.2s both;
-
-}
-
-@keyframes fadeUp{
-
-  from{
-
-    opacity:0;
-
-    transform:
-      translateY(35px);
-
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:
-      translateY(0);
-
-  }
-
-}
-
-/* ==================================================
-   PARTICLES
-================================================== */
-
-.particles{
-
-  position:absolute;
-
-  inset:0;
-
-  overflow:hidden;
-
-  z-index:2;
-
-  pointer-events:none;
-
-}
-
-.particle{
-
-  position:absolute;
-
-  width:4px;
-
-  height:4px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.5);
-
-  animation:
-    float 8s linear infinite;
-
-}
-
-@keyframes float{
-
-  from{
-
-    transform:
-      translateY(110vh)
-      scale(.5);
-
-    opacity:0;
-
-  }
-
-  20%{
-
-    opacity:.7;
-
-  }
-
-  80%{
-
-    opacity:.7;
-
-  }
-
-  to{
-
-    transform:
-      translateY(-20vh)
-      scale(1.3);
-
-    opacity:0;
-
-  }
-
-}
-
-/* ==================================================
-   NAVIGATION
-================================================== */
-
-.navigation{
-
-  position:absolute;
-
-  right:15px;
-
-  top:50%;
-
-  transform:
-    translateY(-50%);
-
-  z-index:50;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:8px;
-
-}
-
-.dot{
-
-  width:5px;
-
-  height:5px;
-
-  border-radius:50%;
-
-  background:
-    rgba(255,255,255,.4);
-
-  transition:.4s;
-
-}
-
-.dot.active{
-
-  height:25px;
-
-  border-radius:5px;
-
-  background:white;
-
-}
-
-/* ==================================================
-   MUSIC BUTTON
-================================================== */
-
-.music{
-
-  position:absolute;
-
-  top:20px;
-
-  right:20px;
-
-  z-index:100;
-
-  width:42px;
-
-  height:42px;
-
-  border-radius:50%;
-
-  border:
-
-    1px solid
-
-    rgba(255,255,255,.5);
-
-  background:
-    rgba(0,0,0,.25);
-
-  color:white;
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  backdrop-filter:blur(10px);
-
-}
-
-.music.playing{
-
-  animation:
-    spin 4s linear infinite;
-
-}
-
-@keyframes spin{
-
-  to{
-
-    transform:rotate(360deg);
-
-  }
-
-}
-
-/* ==================================================
-   SWIPE HINT
-================================================== */
-
-.swipe{
-
-  position:absolute;
-
-  bottom:25px;
-
-  left:50%;
-
-  transform:
-    translateX(-50%);
-
-  z-index:50;
-
-  font-size:10px;
-
-  letter-spacing:3px;
-
-  opacity:.7;
-
-  animation:
-    pulse 2s infinite;
-
-}
-
-@keyframes pulse{
-
-  0%,
-  100%{
-
-    opacity:.3;
-
-  }
-
-  50%{
-
-    opacity:1;
-
-  }
-
-}
-
-/* ==================================================
-   DESKTOP
-================================================== */
-
-@media(min-width:700px){
-
-  body{
-
-    background:#222;
-
-  }
-
-  .invitation{
-
-    box-shadow:
-      0 0 60px rgba(0,0,0,.5);
-
-  }
-
-}
-
-</style>
 </head>
-
 
 <body>
 
-<div class="invitation">
+    <!-- =================================
+         APP CONTAINER
+    ================================== -->
 
-  <!-- =========================================
-       MUSIC
-  ========================================== -->
-
-  <button
-    class="music"
-    id="musicButton"
-    aria-label="Musik"
-  >
-    ♪
-  </button>
-
-  <audio
-    id="music"
-    loop
-    preload="auto"
-  >
-    <source
-      src="assets/music/music.mp3"
-      type="audio/mpeg"
-    >
-  </audio>
-
-
-  <!-- =========================================
-       SLIDES
-  ========================================== -->
-
-  <main class="slides">
-
-
-    <!-- SLIDE 1 -->
-
-    <section
-      class="slide cover active"
+    <main
+        id="app"
+        class="app"
     >
 
-      <div class="particles"></div>
+        <!-- =================================
+             OPENING SCREEN
+        ================================== -->
 
-      <div class="slide-content">
-
-        <div class="label">
-          UNDANGAN PERNIKAHAN
-        </div>
-
-        <h1 class="names">
-
-          Sri Hartina
-
-          <span class="and">
-            &
-          </span>
-
-          Baharudin
-
-        </h1>
-
-        <div class="date">
-          23 • 08 • 2026
-        </div>
-
-        <button
-          class="btn"
-          id="openInvitation"
+        <section
+            id="opening"
+            class="slide slide-opening"
         >
-          BUKA UNDANGAN
-        </button>
 
-      </div>
+            <div class="opening-overlay"></div>
 
-    </section>
+            <div class="opening-content">
 
+                <p
+                    class="eyebrow"
+                    data-animation="fade-up"
+                >
+                    UNDANGAN DIGITAL
+                </p>
 
-    <!-- SLIDE 2 -->
+                <h1
+                    class="opening-title"
+                    data-animation="zoom-in"
+                >
+                    Premium
+                </h1>
 
-    <section class="slide">
+                <p
+                    class="opening-subtitle"
+                    data-animation="fade-up"
+                >
+                    Sebuah momen istimewa
+                    untuk dibagikan
+                </p>
 
-      <div class="particles"></div>
+                <button
+                    id="openInvitation"
+                    class="btn-open"
+                    type="button"
+                >
 
-      <div class="slide-content">
+                    <span>
+                        BUKA UNDANGAN
+                    </span>
 
-        <div class="label">
-          BISMILLAHIRRAHMANIRRAHIM
-        </div>
+                </button>
 
-        <h2 class="names">
-          Dengan penuh
-          <br>
-          kebahagiaan
-        </h2>
+            </div>
 
-        <p style="
-          margin-top:25px;
-          line-height:1.8;
-          font-size:14px;
-          opacity:.85;
-        ">
+        </section>
 
-          Kami mengundang
-          Bapak/Ibu/Saudara/i
-          untuk hadir dan memberikan
-          doa restu pada hari
-          bahagia kami.
 
-        </p>
+        <!-- =================================
+             HERO
+        ================================== -->
 
-      </div>
+        <section
+            id="hero"
+            class="slide slide-hero"
+        >
 
-    </section>
+            <div class="hero-background"></div>
 
+            <div class="hero-overlay"></div>
 
-    <!-- SLIDE 3 -->
+            <div class="hero-content">
 
-    <section class="slide">
+                <p
+                    class="eyebrow"
+                    data-animation="fade-down"
+                >
+                    THE WEDDING OF
+                </p>
 
-      <div class="particles"></div>
+                <h1
+                    class="couple-name"
+                    data-animation="zoom-in"
+                >
 
-      <div class="slide-content">
+                    Sri Hartina
 
-        <div class="label">
-          THE BRIDE & GROOM
-        </div>
+                    <span>&amp;</span>
 
-        <h2 class="names">
+                    Baharudin
 
-          Sri Hartina
+                </h1>
 
-          <span class="and">
-            &
-          </span>
+                <p
+                    class="event-date"
+                    data-animation="fade-up"
+                >
+                    23 · 08 · 2026
+                </p>
 
-          Baharudin
+            </div>
 
-        </h2>
+        </section>
 
-        <p style="
-          margin-top:25px;
-          line-height:1.8;
-          font-size:14px;
-        ">
 
-          Dua insan yang dipertemukan
-          dalam sebuah perjalanan
-          menuju kehidupan baru.
+        <!-- =================================
+             QUOTE / INTRO
+        ================================== -->
 
-        </p>
+        <section
+            id="intro"
+            class="slide slide-intro"
+        >
 
-      </div>
+            <div class="slide-inner">
+
+                <span
+                    class="ornament"
+                    data-animation="fade"
+                >
+                    ❦
+                </span>
+
+                <p
+                    class="quote"
+                    data-animation="fade-up"
+                >
+                    Dan di antara tanda-tanda
+                    kekuasaan-Nya ialah Dia
+                    menciptakan untukmu
+                    pasangan hidup dari jenismu
+                    sendiri.
+                </p>
+
+                <p
+                    class="quote-source"
+                    data-animation="fade-up"
+                >
+                    QS. Ar-Rum : 21
+                </p>
+
+            </div>
 
-    </section>
+        </section>
+
+
+        <!-- =================================
+             COUPLE
+        ================================== -->
+
+        <section
+            id="couple"
+            class="slide slide-couple"
+        >
+
+            <div class="slide-inner">
+
+                <p
+                    class="section-label"
+                    data-animation="fade-down"
+                >
+                    MEMPELAI
+                </p>
+
+                <div class="couple-card">
+
+                    <div
+                        class="person"
+                        data-animation="slide-left"
+                    >
+
+                        <div class="person-photo">
+                            <img
+                                src="assets/img/bride.jpg"
+                                alt="Sri Hartina"
+                            >
+                        </div>
+
+                        <h2>
+                            Sri Hartina
+                        </h2>
+
+                        <p>
+                            Putri dari
+                            <br>
+                            Bapak &amp; Ibu
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="couple-divider"
+                        data-animation="zoom-in"
+                    >
+                        &amp;
+                    </div>
+
 
+                    <div
+                        class="person"
+                        data-animation="slide-right"
+                    >
 
-    <!-- SLIDE 4 -->
+                        <div class="person-photo">
+                            <img
+                                src="assets/img/groom.jpg"
+                                alt="Baharudin"
+                            >
+                        </div>
 
-    <section class="slide">
+                        <h2>
+                            Baharudin
+                        </h2>
 
-      <div class="particles"></div>
+                        <p>
+                            Putra dari
+                            <br>
+                            Bapak &amp; Ibu
+                        </p>
 
-      <div class="slide-content">
+                    </div>
 
-        <div class="label">
-          SAVE THE DATE
-        </div>
+                </div>
+
+            </div>
 
-        <h2 class="names">
-          23
-        </h2>
+        </section>
 
-        <p style="
-          margin-top:10px;
-          letter-spacing:4px;
-        ">
-          AGUSTUS 2026
-        </p>
 
-        <p style="
-          margin-top:25px;
-          line-height:1.8;
-        ">
-          Pukul 10.00 WITA
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- SLIDE 5 -->
-
-    <section class="slide">
-
-      <div class="particles"></div>
-
-      <div class="slide-content">
-
-        <div class="label">
-          TERIMA KASIH
-        </div>
-
-        <h2 class="names">
-
-          Sampai jumpa
-          <br>
-          di hari bahagia kami
-
-        </h2>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-  <!-- =========================================
-       NAVIGATION
-  ========================================== -->
-
-  <div
-    class="navigation"
-    id="navigation"
-  ></div>
-
-
-  <div class="swipe">
-    SWIPE
-  </div>
-
-</div>
-
-
-<script>
-
-/* ==================================================
-   SLIDE ENGINE
-================================================== */
-
-const slides =
-  document.querySelectorAll(".slide");
-
-const navigation =
-  document.getElementById("navigation");
-
-let currentSlide = 0;
-
-let startY = 0;
-
-let endY = 0;
-
-
-/* CREATE DOT */
-
-slides.forEach((slide,index)=>{
-
-  const dot =
-    document.createElement("div");
-
-  dot.className = "dot";
-
-  if(index === 0){
-
-    dot.classList.add("active");
-
-  }
-
-  dot.addEventListener(
-    "click",
-    ()=>goToSlide(index)
-  );
-
-  navigation.appendChild(dot);
-
-});
-
-
-const dots =
-  document.querySelectorAll(".dot");
-
-
-/* GO TO SLIDE */
-
-function goToSlide(index){
-
-  if(index < 0)
-    index = 0;
-
-  if(index >= slides.length)
-    index = slides.length - 1;
-
-  slides[currentSlide]
-    .classList.remove("active");
-
-  dots[currentSlide]
-    .classList.remove("active");
-
-  currentSlide = index;
-
-  slides[currentSlide]
-    .classList.add("active");
-
-  dots[currentSlide]
-    .classList.add("active");
-
-}
-
-
-/* ==================================================
-   TOUCH
-================================================== */
-
-document.addEventListener(
-  "touchstart",
-  e => {
-
-    startY =
-      e.changedTouches[0].screenY;
-
-  },
-  {passive:true}
-);
-
-
-document.addEventListener(
-  "touchend",
-  e => {
-
-    endY =
-      e.changedTouches[0].screenY;
-
-    const distance =
-      startY - endY;
-
-    if(Math.abs(distance) < 50)
-      return;
-
-    if(distance > 0){
-
-      goToSlide(
-        currentSlide + 1
-      );
-
-    }else{
-
-      goToSlide(
-        currentSlide - 1
-      );
-
-    }
-
-  },
-  {passive:true}
-);
-
-
-/* ==================================================
-   MOUSE / DESKTOP
-================================================== */
-
-document.addEventListener(
-  "wheel",
-  e => {
-
-    if(Math.abs(e.deltaY) < 30)
-      return;
-
-    if(e.deltaY > 0){
-
-      goToSlide(
-        currentSlide + 1
-      );
-
-    }else{
-
-      goToSlide(
-        currentSlide - 1
-      );
-
-    }
-
-  },
-  {passive:true}
-);
-
-
-/* ==================================================
-   OPEN INVITATION
-================================================== */
-
-const openButton =
-  document.getElementById(
-    "openInvitation"
-  );
-
-openButton.addEventListener(
-  "click",
-  ()=>{
-
-    goToSlide(1);
-
-    playMusic();
-
-  }
-);
-
-
-/* ==================================================
-   MUSIC
-================================================== */
-
-const music =
-  document.getElementById("music");
-
-const musicButton =
-  document.getElementById(
-    "musicButton"
-  );
-
-
-function playMusic(){
-
-  music
-    .play()
-    .then(()=>{
-
-      musicButton
-        .classList.add("playing");
-
-    })
-    .catch(()=>{});
-
-}
-
-
-musicButton.addEventListener(
-  "click",
-  ()=>{
-
-    if(music.paused){
-
-      playMusic();
-
-    }else{
-
-      music.pause();
-
-      musicButton
-        .classList.remove("playing");
-
-    }
-
-  }
-);
-
-
-/* ==================================================
-   PARTICLES
-================================================== */
-
-document
-  .querySelectorAll(".particles")
-  .forEach(container=>{
-
-    for(
-      let i=0;
-      i<20;
-      i++
-    ){
-
-      const particle =
-        document.createElement(
-          "span"
-        );
-
-      particle.className =
-        "particle";
-
-      particle.style.left =
-        Math.random()*100 + "%";
-
-      particle.style.animationDelay =
-        Math.random()*8 + "s";
-
-      particle.style.animationDuration =
-        5 + Math.random()*8 + "s";
-
-      container.appendChild(
-        particle
-      );
-
-    }
-
-  });
-
-</script>
+        <!-- =================================
+             EVENT
+        ================================== -->
+
+        <section
+            id="event"
+            class="slide slide-event"
+        >
+
+            <div class="slide-inner">
+
+                <p
+                    class="section-label"
+                    data-animation="fade-down"
+                >
+                    SAVE THE DATE
+                </p>
+
+                <h2
+                    class="section-title"
+                    data-animation="zoom-in"
+                >
+                    Acara Pernikahan
+                </h2>
+
+
+                <div
+                    class="event-card"
+                    data-animation="fade-up"
+                >
+
+                    <div class="event-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Minggu
+                    </h3>
+
+                    <strong>
+                        23 Agustus 2026
+                    </strong>
+
+                    <p>
+                        Pukul 10.00 WITA
+                    </p>
+
+                    <div class="event-divider"></div>
+
+                    <p>
+                        Tempat Acara
+                    </p>
+
+                    <p>
+                        Kabupaten Buol
+                    </p>
+
+                    <button
+                        class="btn-location"
+                        type="button"
+                    >
+                        LIHAT LOKASI
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             GALLERY
+        ================================== -->
+
+        <section
+            id="gallery"
+            class="slide slide-gallery"
+        >
+
+            <div class="slide-inner">
+
+                <p
+                    class="section-label"
+                    data-animation="fade-down"
+                >
+                    MOMENTS
+                </p>
+
+                <h2
+                    class="section-title"
+                    data-animation="zoom-in"
+                >
+                    Galeri Kami
+                </h2>
+
+                <div class="gallery-grid">
+
+                    <div
+                        class="gallery-item"
+                        data-animation="slide-left"
+                    >
+                        <img
+                            src="assets/img/gallery-1.jpg"
+                            alt="Galeri 1"
+                        >
+                    </div>
+
+                    <div
+                        class="gallery-item"
+                        data-animation="slide-right"
+                    >
+                        <img
+                            src="assets/img/gallery-2.jpg"
+                            alt="Galeri 2"
+                        >
+                    </div>
+
+                    <div
+                        class="gallery-item"
+                        data-animation="slide-left"
+                    >
+                        <img
+                            src="assets/img/gallery-3.jpg"
+                            alt="Galeri 3"
+                        >
+                    </div>
+
+                    <div
+                        class="gallery-item"
+                        data-animation="slide-right"
+                    >
+                        <img
+                            src="assets/img/gallery-4.jpg"
+                            alt="Galeri 4"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             RSVP
+        ================================== -->
+
+        <section
+            id="rsvp"
+            class="slide slide-rsvp"
+        >
+
+            <div class="slide-inner">
+
+                <p
+                    class="section-label"
+                    data-animation="fade-down"
+                >
+                    RSVP
+                </p>
+
+                <h2
+                    class="section-title"
+                    data-animation="zoom-in"
+                >
+                    Konfirmasi Kehadiran
+                </h2>
+
+                <p
+                    class="rsvp-text"
+                    data-animation="fade-up"
+                >
+                    Kehadiran dan doa restu
+                    Anda merupakan kebahagiaan
+                    bagi kami.
+                </p>
+
+                <form
+                    id="rsvpForm"
+                    class="rsvp-form"
+                >
+
+                    <input
+                        type="text"
+                        id="guestName"
+                        name="guestName"
+                        placeholder="Nama Anda"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <select
+                        id="attendance"
+                        name="attendance"
+                        required
+                    >
+
+                        <option value="">
+                            Konfirmasi Kehadiran
+                        </option>
+
+                        <option value="hadir">
+                            Saya akan hadir
+                        </option>
+
+                        <option value="tidak-hadir">
+                            Maaf, tidak dapat hadir
+                        </option>
+
+                    </select>
+
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Ucapan & doa..."
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="btn-submit"
+                    >
+                        KIRIM UCAPAN
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             CLOSING
+        ================================== -->
+
+        <section
+            id="closing"
+            class="slide slide-closing"
+        >
+
+            <div class="closing-overlay"></div>
+
+            <div class="closing-content">
+
+                <p
+                    class="eyebrow"
+                    data-animation="fade-down"
+                >
+                    TERIMA KASIH
+                </p>
+
+                <h2
+                    data-animation="zoom-in"
+                >
+                    Sri Hartina
+                    <span>&amp;</span>
+                    Baharudin
+                </h2>
+
+                <p
+                    data-animation="fade-up"
+                >
+                    Merupakan suatu kehormatan
+                    bagi kami apabila
+                    Bapak/Ibu/Saudara/i
+                    berkenan hadir.
+                </p>
+
+                <div
+                    class="closing-heart"
+                    data-animation="heartbeat"
+                >
+                    ♡
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         MUSIC CONTROL
+    ================================== -->
+
+    <button
+        id="musicButton"
+        class="music-button"
+        type="button"
+        aria-label="Kontrol musik"
+    >
+        ♪
+    </button>
+
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto"
+    >
+        <source
+            src="assets/music/background.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script
+        src="assets/js/app.js"
+        defer
+    ></script>
+
+    <script
+        src="assets/js/animation.js"
+        defer
+    ></script>
+
+    <script
+        src="assets/js/music.js"
+        defer
+    ></script>
+
+    <script
+        src="assets/js/guest.js"
+        defer
+    ></script>
 
 </body>
 </html>
